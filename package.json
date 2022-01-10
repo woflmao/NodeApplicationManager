@@ -1,0 +1,28 @@
+{
+  "name": "nodeapplicationmanager",
+  "version": "1.0.0",
+  "description": "A simple cli app to track and launch multiple npm based apps from any directory",
+  "main": "./bin/index.js",
+  "bin": {
+    "appman": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "woflmao",
+  "license": "MIT",
+  "dependencies": {
+    "boxen": "4.0",
+    "chalk": "2.4",
+    "yargs": "13.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "prettier": "2.5.1"
+  }
+}
