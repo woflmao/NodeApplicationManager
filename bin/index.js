@@ -12,7 +12,6 @@
 //    exec() does not output expected output of npm run start
 //      this means you won't be able to see the live changes from the usual behavior of 'npm run start'
 //      this is a problem, I know
-//    edit, remove, and add still need to have validation added
 //    whitespace validation needs to be added
 
 const fs = require('fs')
@@ -40,7 +39,7 @@ const handleAdd = () => {
             path: `${path}`
           })
           // write local projects array to projects.json for future use
-          fs.writeFileSync('C:/Users/User/Documents/Development/projects/nodeApplicationManager/bin/projects.json', JSON.stringify(projects), err => {
+          fs.writeFileSync(process.env.PROJECTS_URI, JSON.stringify(projects), err => {
             if (err) throw err
             console.log(`Saved ${project} to products.json`)
           })
@@ -68,7 +67,7 @@ const handleRemove = () => {
       projects.findIndex((element, index) => {
         if (element.project === project) {
           projects.splice(index, 1)
-          fs.writeFileSync('C:/Users/User/Documents/Development/projects/nodeApplicationManager/bin/projects.json', JSON.stringify(projects), err => {
+          fs.writeFileSync(process.env.PROJECTS_URI, JSON.stringify(projects), err => {
             if (err) throw err
           })
         }
@@ -101,7 +100,7 @@ const handleEdit = () => {
         rl.question(`Enter a new path for project ${projects[foundIndexq].project}: `, path => {
           if (path) {
             projects[foundIndex].path = path
-            fs.writeFileSync('C:/Users/User/Documents/Development/projects/nodeApplicationManager/bin/projects.json', JSON.stringify(projects), err => {
+            fs.writeFileSync(process.env.PROJECTS_URI, JSON.stringify(projects), err => {
               if (err) throw err
             })
             console.log(`Saved ${project} to projects.json`)

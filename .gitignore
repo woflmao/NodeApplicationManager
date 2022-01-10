@@ -3,3 +3,5 @@ bin/projects.json
 .prettierignore
 .prettierrc.json
 .vscode
+.eslintrc.js
+.env
