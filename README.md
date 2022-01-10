@@ -1,5 +1,8 @@
 # Node Application Manager
 
+**EDIT IS CURRENTLY BROKEN**
+I have to do my day job so it won't be fixed for a bit
+
 This is a simple program that allows one to run projects that use "npm run start" from anywhere in your file directory.
 
 Designed on windows, and honestly I haven't tested it on any other device to see if it works.
