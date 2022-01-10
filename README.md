@@ -16,7 +16,11 @@ Feel free to send a PR, this is my first CLI app so I imagine there are many peo
 	```bash
 	$ git clone https://github.com/woflmao/NodeApplicationManager.git
 	```
-2. Install globally
+3. Install dependencies
+	```bash
+	$ npm install
+	```
+4. Install globally
 	```bash
 	$ cd nodeApplicationManager
 	$ npm install -g .
