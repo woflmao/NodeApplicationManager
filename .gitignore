@@ -1,0 +1,5 @@
+node_modules
+bin/projects.json
+.prettierignore
+.prettierrc.json
+.vscode
