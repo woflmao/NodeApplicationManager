@@ -29,23 +29,23 @@ Designed on windows, and honestly I haven't tested it on any other device to see
 2. Add a project
 	```bash
 	Enter a project name, or enter add, remove, or edit: add
-	Enter the name of the new project: <project name>
-	Enter the path of the new project: <path to project>
+	Enter the name of the new project: <project-name>
+	Enter the path of the new project: <path-to-project>
 	```
 3. Run a project
 	```bash
-	Enter a project name, or enter add, remove, or edit: <project name>
+	Enter a project name, or enter add, remove, or edit: <project-name>
 	Enter any args you wish to pass (e.g dev, test): <args i.e dev, test>
 	```
 4. Edit a project
 	```bash
 	>>> Enter the name of the project you wish to edit: <existing project name>
-	>>> Enter a new name for the project if you wish: <new project name (optional)>
-	>>> Enter a new path for project vc: <new project path(optional)>
+	>>> Enter a new name for the project if you wish: <new-project-name (optional)>
+	>>> Enter a new path for project vc: <new-project-path(optional)>
 	```
 5. Remove a project
 	```bash
-	>>> Enter the name of the project you wish to remove: <existing project name>
+	>>> Enter the name of the project you wish to remove: <existing-project-name>
 	```
 	
 
