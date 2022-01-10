@@ -14,10 +14,13 @@
 //      this is a problem, I know
 //    whitespace validation needs to be added
 
+require('dotenv').config()
 const fs = require('fs')
 const exec = require('child_process').exec;
 const projects = require('./projects')
 const readline = require('readline')
+const projectURI = process.env.PROJECTS_URI
+console.log(projectURI);
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
@@ -41,8 +44,8 @@ const handleAdd = () => {
           // write local projects array to projects.json for future use
           fs.writeFileSync(process.env.PROJECTS_URI, JSON.stringify(projects), err => {
             if (err) throw err
-            console.log(`Saved ${project} to products.json`)
           })
+          console.log(`Saved ${project} to projects.json`)
           rl.close()
         } else {
           console.log(`Please enter a path for ${project}`)
@@ -72,6 +75,7 @@ const handleRemove = () => {
           })
         }
       })
+      console.log(`Removed ${project} from projects.json`)
       rl.close()
     } else if (project !== '' && projects.filter(e => e.project !== project)) {
       // if project does not exist
@@ -97,13 +101,16 @@ const handleEdit = () => {
         if (name) {
           projects[foundIndex].project = name
         }
-        rl.question(`Enter a new path for project ${projects[foundIndexq].project}: `, path => {
+        rl.question(`Enter a new path for project ${projects[foundIndex].project}: `, path => {
           if (path) {
             projects[foundIndex].path = path
             fs.writeFileSync(process.env.PROJECTS_URI, JSON.stringify(projects), err => {
               if (err) throw err
             })
             console.log(`Saved ${project} to projects.json`)
+            rl.close()
+          } else {
+            console.log(`No changes made to ${project}`)
             rl.close()
           }
         })
