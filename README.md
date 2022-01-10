@@ -4,6 +4,8 @@ This is a simple program that allows one to run projects that use "npm run start
 
 Designed on windows, and honestly I haven't tested it on any other device to see if it works.
 
+Feel free to send a PR, this is my first CLI app so I imagine there are many people who could improve this
+
 ## Installation
 
 ### Prerequisites
