@@ -20,7 +20,7 @@ Feel free to send a PR, this is my first CLI app so I imagine there are many peo
 	```bash
 	$ npm install
 	```
-4. Install globally
+4. Install app globally
 	```bash
 	$ cd nodeApplicationManager
 	$ npm install -g .
